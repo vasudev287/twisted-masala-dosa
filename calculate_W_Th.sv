@@ -29,7 +29,7 @@ begin
 	int_addition add_Ws2 (division_result_Ws2[(i*32)+31:i*32],Ws2_out[(i*8)+7:i*8]);    
 */    
 	subtraction_signed sub_Ws2 ({1'b0,X_in[(i*8)+7:i*8]},{1'b0,Ws2_in[(i*8)+7:i*8]},sub_result_Ws2[(i*9)+8:i*9]);
-	division_logic div_Ws2 (sub_result_Ws2[(i*9)+8:i*9],Ms2_in,division_result_Ws2[(i*9)+8:i*9]);                     
+	division_logic div_Ws2 (sub_result_Ws2[(i*9)+8:i*9],Ms1_in,division_result_Ws2[(i*9)+8:i*9]);                     
  	addition add_Ws2 (division_result_Ws2[(i*9)+8:i*9],{1'b0,Ws2_in[(i*8)+7:i*8]},Ws2_out[(i*8)+7:i*8]);             
    
 end           

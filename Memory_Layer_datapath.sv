@@ -63,7 +63,7 @@ ED_calculator ED (Reg_x,out_demux[0],out_ED);
 min_finder min2 (en_2min,out_ED,/*node_in*/, 
 	Reg_min1_node,Reg_min2_node,Reg_min1_ED,Reg_min2_ED); 
 
-calculate_W_Th calc_alg1 (
+calculate_W_Th calc_alg1 (Reg_x,
 	Reg_Ws1,Reg_Ws2,Reg_Ths1,Reg_Ms1,Reg_min1_ED,
 	in_mux2[0],in_mux2[1],in_mux2[2]);  //??type of mux[2] 
 
