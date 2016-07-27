@@ -92,9 +92,9 @@ end
 endmodule   
 
    
-module  sqrt(
-input logic [array_length -1 :0] a,
-output logic [array_length -1 :0] out);
+module  sqrt( 
+input int a,
+output int out);
 int  square = 1;
 int  delta = 3;
 always_comb 
