@@ -4,7 +4,7 @@ parameter NODE_COUNT=50;
 parameter CLASS_COUNT=5;  
 parameter DIMENSION_ROWS=2; 
 parameter DIMENSION_COLUMNS=2;
-parameter VECTOR_LEN=DIMENSION_ROWS*DIMENSION_COLUMNS;
+parameter VECTOR_LEN=DIMENSION_ROWS*DIMENSION_COLUMNS;       
 
 
 parameter AGE_MAX=6 ;                 
@@ -41,14 +41,14 @@ int node_count;
 }class_T;
  
 typedef struct{
-class_T classes[CLASS_COUNT-1:0];  
+class_T classes[CLASS_COUNT:1];     
 }memory_T;   
 ////////////////////////////////////////////////////////////////////////
    
  
 ///////////////node counter structure /////////
 typedef struct{
-int node_count[CLASS_COUNT-1:0];      
+int node_count[CLASS_COUNT:1];       
 }node_counter_mem_T;     
 ///////////////////////////////////////////////  
 
@@ -59,9 +59,9 @@ typedef struct{
 logic connection_presence;
 int age;  
 }single_node_connection_T;    
- 
+  
 typedef struct {
-single_node_connection_T connection[CLASS_COUNT-1:0][NODE_COUNT:1][NODE_COUNT:1]; 
+single_node_connection_T connection[CLASS_COUNT:1][NODE_COUNT:1][NODE_COUNT:1]; 
 }connection_mem_T ; 
  ///////////////////////////////////////////// 
 

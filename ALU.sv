@@ -1,12 +1,10 @@
-//added import 
-import GAM_package::* ;
-
+import GAM_package::* ; 
+ 
 parameter array_length = 8; 
-
 
  
 module  addition(
-input logic signed [array_length  :0] a, b,      
+input logic signed [array_length  :0] a, b,        
 output logic signed[array_length-1:0] c);
 logic   overflow;  
 
@@ -19,7 +17,7 @@ end
  
 
 endmodule                    
-
+ 
 module subtraction(
 input logic [array_length-1:0] a, b,
 //input  logic[ array_length -1: 0] b;
@@ -95,8 +93,8 @@ endmodule
 
    
 module  sqrt(
-input int a,
-output int out);
+input logic [array_length -1 :0] a,
+output logic [array_length -1 :0] out);
 int  square = 1;
 int  delta = 3;
 always_comb 
@@ -125,19 +123,21 @@ endmodule
 
 // Validate the block mentioned below !!!!!!!!!!!!
 module square_results_adder(
-input logic [(VECTOR_LEN)*32 -1 :0] a,
+input logic [(VECTOR_LEN*32) -1 :0] a, 
 output int out);
 
 always_comb 
+
 begin 	
 	out = 0;
 
 	for ( int i =0; i<VECTOR_LEN ; i++ )
 	begin
 
-		 out += a[(i*32) +:32];
+		 out += a[(i*32) +:32];    
 
 	end 
 
 end 
-endmodule       
+     
+endmodule             

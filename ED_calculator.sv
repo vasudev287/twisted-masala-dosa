@@ -7,8 +7,8 @@ module ED_calculator(
 
 int ED_temp;
 //intermediate variables
-node_vector_T sub_result;
-logic [(VECTOR_LEN*32)-1:0]square_result;  
+node_vector_T sub_result;    
+logic [(VECTOR_LEN*32)-1:0]square_result;                 
 int sum_out; 
 
 genvar i;  
