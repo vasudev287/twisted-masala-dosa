@@ -64,8 +64,8 @@ read_MWT:
 update_M_compare_Th_ED:
 	begin
 	{M_c,ld_upcounter}='1;
-	RD_WR_c=WRITE;
-	mux4=2'b01;  
+	RD_WR_c=WRITE;    
+	mux4=2'b01;   
 	{mux1,mux5,mux6}={3{2'b10}}; //edited
 	end
 greater_than_Th:
@@ -76,7 +76,7 @@ greater_than_Th:
 	mux3=2'b01;  
 	end
 less_than_Th: 
-	begin
+	begin 
 	{W_c,ld_upcounter}='1; 
 	demux=2'b10; 
 	end
@@ -99,6 +99,7 @@ begin
 	{W_c,ld_upcounter}='1; 
 	RD_WR_c=WRITE;
 	mux2=2'b10; 
+	mux1=2'b11;
 	end
 connections:
 	{ld_upcounter,en_connection}='1;
@@ -127,7 +128,7 @@ begin
 	next_state=existing_class; 
 	else 		  
 	next_state=no_class;
-end 
+end  
 no_class: 
 	next_state=new_input;
 existing_class:
