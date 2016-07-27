@@ -94,7 +94,7 @@ endmodule
    
 module  sqrt( 
 input int a,
-output logic int out);
+output int out);
 int  square = 1;
 int  delta = 3;
 always_comb 
