@@ -1,0 +1,15 @@
+# Current time Tue Jul 26 17:57:42 2016
+# Program = vish
+# Id = "10.4c"
+# Version = "2015.07"
+# Date = "Jul 20 2015"
+# Platform = win64
+
+Exception c0000005 has occurred at address 401ae264. Traceback:
+# 0    0x401ae264: 'Mtirpc_Init + 0xef914'
+# 1    0xffe01f00: '<unknown (@0xffe01f00)>'
+# 2    0x0d9634f0: '<unknown (@0xd9634f0)>'
+# 3    0x0b84f260: '<unknown (@0xb84f260)>'
+StackWalk failed 487
+# End of Stack Trace
+
