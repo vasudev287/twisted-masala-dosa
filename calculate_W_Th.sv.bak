@@ -2,13 +2,13 @@ import GAM_package::* ;
  
 module calculate_W_Th(
 	input node_vector_T X_in,Ws1_in,Ws2_in,
-	input int Ths1_in,Ms1_in,min1_ED,  
+	input int Ths1_in,Ms1_in,min1_ED,Ms2_in,  
 	output node_vector_T Ws1_out,Ws2_out,
 	output int Ths1_out ); 
 
 
 //intermediate variables  
-node_vector_signed_T sub_result_Ws1,sub_result_Ws2,division_result_Ws1;       
+node_vector_signed_T sub_result_Ws1,sub_result_Ws2,division_result_Ws1, division_result_Ws2;       // Added variable division_result_w2 
 //logic [(VECTOR_LEN*32)-1:0]division_result_Ws1,division_result_Ws2;      
 int add_result_Ths1;    
   

@@ -98,15 +98,6 @@ QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
 Top level modules:
 	upcounter
 
-} {} {}} {//khensu/Home05/rvasudev/My Documents/NFS/calculate_W_Th.sv} {1 {vlog -work work -vopt -sv -stats=none {//khensu/Home05/rvasudev/My Documents/NFS/calculate_W_Th.sv}
-QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
--- Compiling package calculate_W_Th_sv_unit
--- Importing package GAM_package
--- Compiling module calculate_W_Th
-
-Top level modules:
-	calculate_W_Th
-
 } {} {}} {//khensu/Home05/rvasudev/My Documents/NFS/comparator.sv} {1 {vlog -work work -vopt -sv -stats=none {\\khensu\Home05\rvasudev\My Documents\NFS\comparator.sv}
 QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
 -- Compiling package comparator_sv_unit
@@ -135,15 +126,6 @@ QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
 
 Top level modules:
 	ED_calculator
-
-} {} {}} {//khensu/Home05/rvasudev/My Documents/NFS/Memory_Layer_datapath.sv} {1 {vlog -work work -vopt -sv -stats=none {//khensu/Home05/rvasudev/My Documents/NFS/Memory_Layer_datapath.sv}
-QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
--- Compiling package Memory_Layer_datapath_sv_unit
--- Importing package GAM_package
--- Compiling module Memory_Layer_datapath
-
-Top level modules:
-	Memory_Layer_datapath
 
 } {} {}} {//khensu/Home05/rvasudev/My Documents/NFS/Memory_Layer_connection_memory.sv} {1 {vlog -work work -vopt -sv -stats=none {//khensu/Home05/rvasudev/My Documents/NFS/Memory_Layer_connection_memory.sv}
 QuestaSim-64 vlog 10.4c Compiler 2015.07 Jul 20 2015
