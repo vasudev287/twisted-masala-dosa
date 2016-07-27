@@ -1,4 +1,3 @@
-// Incomplete Module 
 import GAM_package::* ;  
 
 module Memory_Layer_connection_memory(
@@ -6,23 +5,23 @@ module Memory_Layer_connection_memory(
 	input en_connection,learning_done); 
 	
 connection_mem_T connection;     
-
+                                   
 always@(posedge en_connection) 
 begin
-
-if(en_connection & !learning_done)
+ 
+if(en_connection & !learning_done)         
 	begin
 	connection.connection[class_i][node1][node2].connection_presence=1;    
 	connection.connection[class_i][node2][node1].connection_presence=1;
 	connection.connection[class_i][node1][node2].age=0;   //??in case there's alreasy a coonection          
 	connection.connection[class_i][node1][node2].age=0;                 	
-	
+	  
 	for(int i=1;i<NODE_COUNT;i++)
 		begin
-		if(i!= node1 & i!=node2)
+		if(i!=node1 & i!=node2)
 			begin
 			if( connection.connection[class_i][node1][i].connection_presence==1)
-			connection.connection[class_i][node1][i].age= connection.connection[class_i][node1][node2].age+1;  
+			connection.connection[class_i][node1][i].age=connection.connection[class_i][node1][node2].age+1;  
 			end 
 		end 
 	end 
@@ -45,17 +44,18 @@ begin
 		
 	for(int i=1;i<NODE_COUNT;i++)    
 	begin
-	static int connection_count=0;             
+	static  int connection_count=0;             
 	for(int j=1;i<NODE_COUNT;j++)	
 	begin 
 	if(connection.connection[class_i][node1][node2].connection_presence==1)
 	connection_count=connection_count+1;
 	end
-	if(connection_count==0)$display("logic to be written");
+	if(connection_count==0)
 	//remove node ?????????	
 	//node_valid=INVALID; // see if needed by other algorithm, change accordingly 
+	$display("");         
 	end 
-	
+	               
 	
 end 
 end

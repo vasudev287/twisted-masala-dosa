@@ -18,11 +18,11 @@ enum {idle,waiting_assoc,new_input,no_class,
    
 always_ff @(posedge clk)
 begin
-if (reset)
-present_state<= idle;
+if(reset)
+present_state<=idle;
 else 
 present_state<=next_state;
-end
+end  
 
 //outputs in each state
 always_comb

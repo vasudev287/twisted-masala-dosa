@@ -2,8 +2,7 @@ import GAM_package::* ;
 
 module Memory_Layer_memory(
 	input int class_i,node_i,Th_i,M_i,
-	input   X_c,C_c,W_c,T_c,M_c,
-	input RD_WR_T RD_WR_c,   
+	input   X_c,C_c,W_c,T_c,M_c,input RD_WR_T RD_WR_c,   
 	input node_vector_T X_i,W_i,
 	output int class_o,node_o,Th_o,M_o,
 	output  node_vector_T X_o,W_o
@@ -20,7 +19,7 @@ always_comb
 begin
 //use unique case to check if data is being 
 // read/written to when always_comb executes before start of sim
-if(RD_WR_c == READ)            
+if(RD_WR_c==READ)            
 	begin     
 	if(X_c==1) 
 	X_o= memory.classes[class_i].node[node_i].X ; 

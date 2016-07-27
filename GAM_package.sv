@@ -59,7 +59,7 @@ typedef struct{
 logic connection_presence;
 int age;  
 }single_node_connection_T;    
- 
+  
 typedef struct {
 single_node_connection_T connection[CLASS_COUNT-1:0][NODE_COUNT:1][NODE_COUNT:1]; 
 }connection_mem_T ; 

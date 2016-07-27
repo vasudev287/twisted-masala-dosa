@@ -7,8 +7,8 @@ module calculate_W_Th(
 	output int Ths1_out ); 
 
 
-//intermediate variables  
-node_vector_signed_T sub_result_Ws1,sub_result_Ws2,division_result_Ws1, division_result_Ws2;       // Added variable division_result_w2 
+//intermediate variables                    
+node_vector_signed_T sub_result_Ws1,sub_result_Ws2,division_result_Ws1,division_result_Ws2;         
 //logic [(VECTOR_LEN*32)-1:0]division_result_Ws1,division_result_Ws2;      
 int add_result_Ths1;    
   
@@ -31,11 +31,11 @@ begin
 	subtraction_signed sub_Ws2 ({1'b0,X_in[(i*8)+7:i*8]},{1'b0,Ws2_in[(i*8)+7:i*8]},sub_result_Ws2[(i*9)+8:i*9]);
 	division_logic div_Ws2 (sub_result_Ws2[(i*9)+8:i*9],Ms1_in,division_result_Ws2[(i*9)+8:i*9]);                     
  	addition add_Ws2 (division_result_Ws2[(i*9)+8:i*9],{1'b0,Ws2_in[(i*8)+7:i*8]},Ws2_out[(i*8)+7:i*8]);             
-   
+    
 end           
 endgenerate         
      
 	int_addition add_Ths1 (Ths1_in,min1_ED,add_result_Ths1); 
 	division div_Ths1 (add_result_Ths1,2,Ths1_out);    
-
+ 
 endmodule          
