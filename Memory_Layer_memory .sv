@@ -24,7 +24,7 @@ if(RD_WR_c==READ)
 	if(X_c==1) 
 	X_o= memory.classes[class_i].node[node_i].X ; 
 	if(C_c==1) 
-	class_o=memory.classes[class_i].node[node_i].class_name;
+	class_o=memory.classes[class_i].class_name;    
 	if(W_c==1) 
 	W_o=memory.classes[class_i].node[node_i].W;
 	if(T_c==1)  

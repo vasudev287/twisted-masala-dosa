@@ -1,8 +1,10 @@
+import GAM_package::* ; 
+ 
 parameter array_length = 8; 
 
  
 module  addition(
-input logic signed [array_length  :0] a, b,      
+input logic signed [array_length  :0] a, b,        
 output logic signed[array_length-1:0] c);
 logic   overflow;  
 
@@ -119,15 +121,23 @@ end
 endmodule      
 
 
-module vector_addition (
-input [(array_length*8) -1: 0] a, 
-output [array_length-1 : 0] out);
-always_comb   
-begin        
-	for ( int i =0; i< 8; i++ )
+// Validate the block mentioned below !!!!!!!!!!!!
+module square_results_adder(
+input logic [(VECTOR_LEN*32) -1 :0] a, 
+output int out);
+
+always_comb 
+
+begin 	
+	out = 0;
+
+	for ( int i =0; i<VECTOR_LEN ; i++ )
 	begin
-	out[array_length -1: 0] += a[array_length*i -1: i];
+
+		 out += a[(i*32) +:32];    
+
 	end 
+
 end 
-  
+     
 endmodule             

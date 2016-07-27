@@ -35,12 +35,12 @@ assoc_learning_start,en_connection,en_2min}='0;
 RD_WR_c=READ; 
 unique case(present_state)
 idle: 
-	{ld_upcounter,en_upcounter}=2'b11;     
+	ld_upcounter=1'b1;     
 waiting_assoc: 
 	{ld_upcounter,assoc_learning_start}=2'b11;    
 new_input:
 	begin
-	{C_c,ld_upcounter}=2'b11;
+	{C_c,ld_upcounter}=2'b11;  
 	{mux5,mux6}='0;
 	end
 no_class:
@@ -65,8 +65,8 @@ update_M_compare_Th_ED:
 	begin
 	{M_c,ld_upcounter}='1;
 	RD_WR_c=WRITE;
-	{mux1,mux4}={2{2'b01}};
-	{mux5,mux6}={2{2'b10}}; 
+	mux4=2'b01;  
+	{mux1,mux5,mux6}={3{2'b10}}; //edited
 	end
 greater_than_Th:
 	begin
