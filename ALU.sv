@@ -6,13 +6,16 @@ parameter array_length = 8;
 module  addition(
 input logic signed [array_length  :0] a, b,        
 output logic signed[array_length-1:0] c);
-logic   overflow;  
+logic   overflow =0;  
 
 always_comb 
 begin  
 	overflow= (a[array_length -1] & b[array_length -1]) ;   //changed     
+$display ( "Value of a and b are %0d and %0d",a,b);
+
 	 c =  a+ b;         
-	assert (overflow != 1) $display ("Overflow occured");	
+$display( "Value of c is %0d",c);
+	assert (overflow == 1) $display ("Overflow occured in addition module of ALU");	
 end   	  
  
 
